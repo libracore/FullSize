@@ -7,15 +7,13 @@
 
 function AddFullsizeBtn() {
 	var node = document.createElement("LI");
-	var btn = document.createElement("BUTTON");
-	btn.classList.add("btn-success");
-	btn.style.width = "100%";
-	btn.style.height = "30px";
-	btn.setAttribute('id','fullsizebtn')
+	var a_tag = document.createElement("A");
+	a_tag.href = "#";
+	a_tag.setAttribute('id','fullsizebtn');
 	var t = document.createTextNode("Fullsize View");
-	btn.appendChild(t);
-	node.appendChild(btn);
-	document.getElementById("toolbar-user").appendChild(node);
+	a_tag.appendChild(t);
+	node.appendChild(a_tag);
+	document.getElementById("toolbar-user").insertBefore(node, document.getElementById("toolbar-user").getElementsByClassName("divider")[0]);
 }
 
 function GoFullsize() {
