@@ -8,7 +8,7 @@
 function AddFullsizeBtn() {
 	var node = document.createElement("LI");
 	var a_tag = document.createElement("A");
-	a_tag.href = "#";
+	//a_tag.href = "#";
 	a_tag.setAttribute('id','fullsizebtn');
 	var t = document.createTextNode("Fullsize View");
 	a_tag.appendChild(t);
