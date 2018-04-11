@@ -17,7 +17,13 @@ function AddFullsizeBtn() {
 }
 
 function GoFullsize() {
-	askForResizeFont();
+	//removed, belongs to v1.1.0
+	//askForResizeFont();
+	var sheet = document.createElement('style')
+	sheet.setAttribute('id','fullsizestyle');
+	sheet.innerHTML = ".container {width: 100% !important;}";
+	document.body.appendChild(sheet);
+	prepareBackToNormalView();
 }
 
 function AddEventListenerToBTN1() {
@@ -38,11 +44,13 @@ function BackToNormalView() {
 	var sheetParent = sheetToBeRemoved.parentNode;
 	sheetParent.removeChild(sheetToBeRemoved);
 	document.getElementById("fullsizebtn").innerHTML="Fullsize View";
-	goBackToOldSizes();
+	//removed, belongs to v1.1.0
+	//goBackToOldSizes();
 	AddEventListenerToBTN1();
 }
 
-function getAllFontSizes(size) {
+//removed, belongs to v1.1.0
+/* function getAllFontSizes(size) {
 	fontSizeArray = [];
 	var elements = $("#body_div").find("*");
 	elements.each(function() {
@@ -73,14 +81,15 @@ function getAllFontSizes(size) {
 			}
 		}
 	});
-}
+} */
 
-function goBackToOldSizes() {
+//removed, belongs to v1.1.0
+/* function goBackToOldSizes() {
 	var elements = $("#body_div").find("*");
 	elements.each(function(index) {
 		$(this).css("font-size", "");
 	});
-}
+} */
 
 function askForResizeFont() {
 	frappe.prompt([
@@ -92,12 +101,13 @@ function askForResizeFont() {
 			} else {
 				frappe.show_alert("New Font-Size smaller than 100% - no change triggered!", 5);
 			}
-			var sheet = document.createElement('style')
+			//removed, belongs to v1.1.0
+			/* var sheet = document.createElement('style')
 			sheet.setAttribute('id','fullsizestyle');
 			sheet.innerHTML = ".container {width: 100% !important;}";
 			document.body.appendChild(sheet);
 			getAllFontSizes(parseInt(data.size));
-			prepareBackToNormalView();
+			prepareBackToNormalView(); */
 		},
 		'Set optionally new Font-Size',
 		'Set'
