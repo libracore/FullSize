@@ -4,16 +4,12 @@ FullSize is a [ERPNext](https://www.erpnext.org) App, developed by [libracore Gm
 
 [ERPNext](https://www.erpnext.org) is a global, leading, cloud based open source enterprise resource planning software. [ERPNext](https://www.erpnext.org) is a trademark by Frappé Technologies.
 
+# Notes
+This project/repo has been merged into [ERPNextSwiss](https://github.com/libracore/erpnextswiss) and will not be maintained any longer.
+
 ## Features
 ### Current release
 * Choose between normal and full-size view
-
-### V1.1.0 or Branch **Master-v1.1.0**
-```
-! BETA VERSION !
-```
-* Choose between normal and full-size view
-* Increase the font-size in percentage
 
 ## Requirements
 Requires an [ERPNext server instance](https://github.com/frappe/erpnext)
